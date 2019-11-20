@@ -1,0 +1,33 @@
+<% provide(:title, "Profile") %>
+
+<h1>Profile</h1>
+
+<% if current_user != @user %>
+	<%= link_to "Invite", invite_path(user_id: @user.id), class: "btn-primary btn-lg" %>
+<% end %>
+
+<hr>
+
+<p>This is the account of <%= @user.email %>.</p>
+
+<%= link_to "Edit Account", edit_user_path(@user) %>
+<br>
+<%= link_to "Delete Account", @user, method: :delete, data: { confirm: "Are you sure?" } %>
+
+<hr>
+
+<h2>Hosted Events</h2>
+
+<%= render @user.hosted_events %>
+
+<hr>
+
+<h2>Attending Events</h2>
+
+<%= render @user.attended_events.future_events %>
+
+<hr>
+
+<h2>Attended Events</h2>
+
+<%= render @user.attended_events.past_events %>
