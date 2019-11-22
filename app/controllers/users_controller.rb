@@ -8,7 +8,9 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+       @user = User.find(params[:id])
+    @upcoming_events = @user.attended_events.future_events 
+    @past_events = @user.attended_events.past_events 
   end
 
   def new
@@ -52,6 +54,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+   
+  def set_user
+  
   end
 
   def correct_user
