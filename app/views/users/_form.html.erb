@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+	<%= render 'errors' %>
+	<div class="form-group">
+		<h4><%= f.label :email %></h4>
+		<%= f.text_field :email, class: "form-control" %>
+	</div>
+
+	<%= f.submit 'Create User', class: "btn-primary btn-lg" %>
+<% end %>

@@ -1,0 +1,19 @@
+<% provide(:title, "Notifications") %>
+
+<h1>Notifications</h1>
+
+<hr>
+
+<ul class="list-group">
+	<% @events.each do |event| %>
+		<li class="list-group-item">
+			<%= event.title %>
+			<br>
+			<%= event.start_time.strftime("%D - %I:%M %p") %>
+			<br>
+			<%= link_to "Accept Invitation", invitation_path(accept: true, event_id: event.id) %>
+			<br>
+			<%= link_to "Reject Invitation", invitation_path(accept: false, event_id: event.id) %>
+		</li>
+	<% end %>
+</ul>
