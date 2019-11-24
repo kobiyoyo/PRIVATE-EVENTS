@@ -1,0 +1,27 @@
+<h1>Invite</h1>
+
+<hr>
+
+<p>Hello, <%= current_user.email %></p>
+
+<p>It looks like you want to invite <%= @user.email %> to one of your events!</p>
+
+<p>Which event would you like them to attend?</p>
+
+<%= form_for(@invitation, url: invite_path) do |f| %>
+	<% if @invitation.errors.any? %>
+		<div class="alert-warning">
+			<ul>
+				<h5>This form contains <%= pluralize(@invitation.errors.count, "error") %>:</h5>
+				<% @invitation.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= f.hidden_field :invited_id, value: @invitation.invited_id %>
+	<%= f.hidden_field :inviter_id, value: @invitation.inviter_id %>
+	<%= f.collection_select :event_id, @possible_events, :id, :title %>
+	<br>
+	<%= f.submit "Invite", class: "btn-primary btn-lg" %>
+<% end %>

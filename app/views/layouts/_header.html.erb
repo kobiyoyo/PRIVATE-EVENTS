@@ -1,0 +1,25 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+
+    <%= link_to "Event App", root_path, id: "logo"  %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+		<li><%= link_to "Events", events_path, class: "nav-link" %></li>
+
+		<% if !logged_in? %>
+			<li><%= link_to "Sign Up", signup_path, class: "nav-link" %></li>
+			<li><%= link_to "Log In", login_path, class: "nav-link" %></li>
+		<% else %>
+
+			<li><%= link_to "Users", users_path, class: "nav-link" %></li>
+			<li><%= link_to "New Event", new_event_path, class: "nav-link" %></li>
+			<li><%= link_to "Account", current_user, class: "nav-link" %></li>
+			<li><% notifications = current_user.received_invitations.count %>
+				<%= link_to "Notifications #{notifications == 0 ? "" : "(#{notifications})"}", notifications_path, class: "nav-link" %>
+			</li>
+			<li><%= link_to "Log Out", logout_path, method: :delete, class: "nav-link" %></li>
+		<% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

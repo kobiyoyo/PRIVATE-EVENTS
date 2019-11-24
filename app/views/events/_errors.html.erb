@@ -1,0 +1,10 @@
+<div class="alert-warning">
+	<% if @event.errors.any? %>
+		<ul>
+			<h5>This form contains <%= pluralize(@event.errors.count, "error") %>:</h5>
+			<% @event.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+</div>
