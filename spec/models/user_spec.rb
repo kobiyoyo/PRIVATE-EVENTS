@@ -3,31 +3,23 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 	describe 'User validation' do 
 	  context 'Password' do 
-		it 'should check for short password' do 
-			user =  User.new(email:'adama@gmail.com', password:'12345')  
+		it 'should check for empty email' do 
+			user =  User.new(email:'')  
 			expect(user.valid?).to be_falsy
-		end
-		it 'should check for empty password' do 
-			user =  User.new(email:'adama@gmail.com', password:'')  
-			expect(user.valid?).to be_falsy
-		end
-		it 'should check for valid password' do 
-			user =  User.new(email:'adama@gmail.com', password:'123456')  
-			expect(user.valid?).to be_truthy
 		end
 	  end
 	  context 'Email' do 
 		it 'should check for invalid email' do 
-			user =  User.new(email:'adamagmail.com', password:'123456')  
+			user =  User.new(email:'adamagmail.com')  
 			expect(user.valid?).to be_falsy
 		end
 		it 'should check for email uniqueness' do 
-			user =  FactoryBot.create(:user,email:'adama@gmail.com', password:'123456')  
-			user2 =  User.new(email:'adama@gmail.com', password:'123456')  
+			user =  FactoryBot.create(:user,email:'adama@gmail.com')  
+			user2 =  User.new(email:'adama@gmail.com')  
 			expect(user2.valid?).to be_falsy
 		end
 		it 'should check for valid email' do 
-			user =  User.new(email:'adama@gmail.com', password:'123456')  
+			user =  User.new(email:'adama@gmail.com')  
 			expect(user.valid?).to be_truthy
 		end
 	  end
