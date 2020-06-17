@@ -9,11 +9,11 @@
     <br />
     <a href="https://stormy-ravine-81598.herokuapp.com/">View Demo</a>
     ·
-    <a href="https://github.com/kobiyoyo/TaskApp/issues">Report Bug</a>
+    <a href="https://github.com/kobiyoyo/PRIVATE-EVENTS/issues">Report Bug</a>
     ·
-    <a href="https://github.com/kobiyoyo/TaskApp/issues">Request Feature</a>
+    <a href="https://github.com/kobiyoyo/PRIVATE-EVENTS/issues">Request Feature</a>
   </p>
-  <img src="app/assets/images/screenshot.png" alt="facebook-project">
+  <img src="app/assets/images/screenshot.png" alt="private-project">
 </p>
 
 
@@ -25,33 +25,54 @@ Private Events app is aimed at  building a clone  version of Eventbrite, which a
 The project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 
 
-## Technologies
-
 - Ruby 
-- Rails 
-- Rspec
+- Ruby on Rails
+- Bootstrap 4
+- Rubocop
+- PostgreSQL
 
-## Usage
+## Features
+- A user can signup/login
+- A user can create, delete, edit events.
 
-> Clone the repository to your local machine
+## Future features
+* User can Create a timer for each event.
+* Logout after 5 minutes of inactivity
 
-```sh
-$ git clone https://github.com/danilozag1992/PRIVATE-EVENTS.git
+
+## Environment
+- Ruby on Rails version 6.0
+- [Bootstrap-sass](https://www.rubydoc.info/gems/bootstrap-sass/3.3.6) is a Sass-powered version of Bootstrap 3, ready to drop right into your Sass powered applications version 3.3.7
+- Puma: A Ruby Web Server Built For Concurrency version '3.9.1'
+
+## Getting started
+> To get started with the app, clone the repo and then install the needed gems:
+
+```
+$ bundle install --without production
 ```
 
-> cd into the directory
+> Next,create & migrate the database:
+```
+$ rails db:create
 
-```sh
-$ cd PRIVATE-EVENTS
-$ bundle install
 $ rails db:migrate
+```
+
+> Run the app in a local server:
+
+```
+$ rails server
+```
+> Finally, run the test suite to verify that everything is working correctly:
+
+```
 $ rspec
 ```
-
 > You can then drop into rails console to explore the models
 
 ```sh
-$ cd rails c
+$  rails c
 ```
 
 ## Contributors
