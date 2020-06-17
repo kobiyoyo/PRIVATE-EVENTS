@@ -1,4 +1,24 @@
-# PRIVATE-EVENTS
+
+<br />
+<p align="center">
+  <h1 align="center"> Private Events </h1>
+
+  <p align="center">
+    A Ruby on Rails application
+    <br />
+    <br />
+    <a href="https://stormy-ravine-81598.herokuapp.com/">View Demo</a>
+    ·
+    <a href="https://github.com/kobiyoyo/TaskApp/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/kobiyoyo/TaskApp/issues">Request Feature</a>
+  </p>
+  <img src="app/assets/images/screenshot.png" alt="facebook-project">
+</p>
+
+
+
+
 
 Private Events app is aimed at  building a clone  version of Eventbrite, which allows users to create events and manage user signups. Users can create events and attend them. Events take place at a specific date and at a location. Only signed up user can create events. A user can attend many events and an event can be attended by many users.
 

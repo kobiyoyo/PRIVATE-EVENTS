@@ -7,11 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 include Faker
-5.times do 
+54.times do 
 	Event.create(
 			title: Faker::Name.unique.name, 
 			location: Faker::Address.full_address, 
 			start_time: Faker::Date.in_date_period, 
-			description:Faker::Lorem.sentence(word_count: 33)
+			description:Faker::Lorem.sentence(word_count: 43),
+			creator_id:1
 		)
 end
