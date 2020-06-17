@@ -25,6 +25,8 @@ Private Events app is aimed at  building a clone  version of Eventbrite, which a
 The project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 
 
+
+## Built With
 - Ruby 
 - Ruby on Rails
 - Bootstrap 4
