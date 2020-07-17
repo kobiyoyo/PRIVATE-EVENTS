@@ -22,8 +22,6 @@
 
 Private Events app is aimed at  building a clone  version of Eventbrite, which allows users to create events and manage user signups. Users can create events and attend them. Events take place at a specific date and at a location. Only signed up user can create events. A user can attend many events and an event can be attended by many users.
 
-The project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
-
 
 
 ## Built With
