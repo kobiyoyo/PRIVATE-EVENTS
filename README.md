@@ -36,7 +36,7 @@ Private Events app is aimed at  building a clone  version of Eventbrite, which a
 - A user can create, delete, edit events.
 
 ## Future features
-* User can Create a timer for each event.
+* User can create a timer for each event.
 * Logout after 5 minutes of inactivity
 
 
